@@ -7,6 +7,8 @@ module Legato
 
     def data
       @data ||= MultiJson.decode(@raw_response.body)
+      Rails.logger.debug("Legato got some data")
+      Rails.logger.debug(@data)
     end
 
     def collection
